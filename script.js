@@ -243,6 +243,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // If Paystack not configured, disable checkout and show top notice
+    if (!isPaystackConfigured()) {
+        const btn = document.querySelector('#checkoutForm button[type="submit"]');
+        if (btn) {
+            const txt = btn.querySelector('.button-text');
+            if (txt) txt.textContent = 'Checkout disabled';
+            btn.disabled = true;
+            btn.title = 'Add your Paystack public key to enable payments';
+        }
+        const nb = document.getElementById('noticeBar');
+        if (nb) nb.style.display = 'block';
+    }
+
     // Close mobile menu when a nav link is clicked (for in-page anchors)
     const navLinksEl = document.getElementById('navLinks');
     if (navLinksEl) {
@@ -284,6 +297,14 @@ let currentPage = 1;
 
 // Replace with your actual Paystack public key (pk_test_... or pk_live_...)
 const PAYSTACK_PUBLIC_KEY = 'pk_test_replace_with_your_key';
+
+// Detect if Paystack is configured
+const PAYSTACK_KEY_PLACEHOLDER = (PAYSTACK_PUBLIC_KEY || '').includes('replace_with_your_key');
+function isPaystackConfigured() {
+    return typeof PAYSTACK_PUBLIC_KEY === 'string' &&
+           PAYSTACK_PUBLIC_KEY.startsWith('pk_') &&
+           !PAYSTACK_KEY_PLACEHOLDER;
+}
 
 // Checkout config
 const SHIPPING_OPTIONS = {
@@ -661,6 +682,10 @@ function payWithPaystack(data) {
     const cart = getCart();
     if (!cart || cart.length === 0) {
         alert('Your cart is empty.');
+        return;
+    }
+    if (!isPaystackConfigured()) {
+        alert('Checkout is disabled: add your Paystack public key in script.js to enable payments.');
         return;
     }
     if (!window.PaystackPop) {
