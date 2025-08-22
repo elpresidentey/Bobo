@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bobo & Omoge — Orders (Admin)</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://api.paystack.co; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
+  <style>
+    body { padding-top: 90px; }
+    .admin-container { max-width: 1100px; margin: 0 auto; padding: 1rem 5%; }
+    .admin-header { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-bottom:1rem; }
+    .admin-header h1 { font-family:'Playfair Display',serif; color: var(--deep-green); font-size: 2rem; }
+    .toolbar { display:flex; flex-wrap:wrap; gap:0.5rem; }
+    .toolbar .btn { background: var(--deep-green); color:#fff; border:none; padding:0.6rem 0.9rem; border-radius:8px; cursor:pointer; }
+    .filters { display:grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap:0.75rem; margin: 1rem 0; }
+    .filters input, .filters select { padding:0.6rem 0.8rem; border:1px solid #e5e7eb; border-radius:8px; }
+    .orders-list { display: grid; gap: 0.75rem; }
+    .order-card { border:1px solid #eee; border-radius:12px; background:#fff; box-shadow: var(--shadow-light); padding: 1rem; }
+    .order-head { display:flex; align-items:center; justify-content:space-between; gap:0.5rem; }
+    .order-meta { color: var(--light-text); font-size:0.95rem; }
+    .badges { display:flex; gap:0.5rem; align-items:center; }
+    .badge { padding:0.2rem 0.5rem; border-radius:999px; font-size:0.8rem; border:1px solid #e5e7eb; }
+    .badge.paid { background:#eaf8ef; color:#1e7f3d; border-color:#bde5c8; }
+    .badge.pending { background:#fff8e6; color:#9a6b00; border-color:#f6d889; }
+    .badge.verified { background:#edf6ff; color:#0b67c2; border-color:#cfe6ff; }
+    .order-actions { display:flex; gap:0.5rem; flex-wrap:wrap; }
+    .order-actions .btn { padding:0.4rem 0.7rem; }
+    details.items { margin-top:0.5rem; }
+    details.items summary { cursor:pointer; color: var(--deep-green); margin-bottom:0.25rem; }
+    .items-list { display:grid; gap:0.25rem; margin-top:0.5rem; }
+    .items-row { display:flex; align-items:center; justify-content:space-between; }
+    .muted { color: var(--light-text); }
+    @media (max-width:640px){ .order-head { flex-direction:column; align-items:flex-start; } }
+  </style>
+</head>
+<body>
+  <div class="admin-container">
+    <div class="admin-header">
+      <h1>Orders (Admin)</h1>
+      <div class="toolbar">
+        <button id="exportBtn" class="btn">Export JSON</button>
+        <label class="btn" for="importFile" style="cursor:pointer;">Import JSON</label>
+        <input id="importFile" type="file" accept="application/json" style="display:none" />
+        <button id="clearBtn" class="btn" style="background:#a61e1e;">Clear All</button>
+        <button id="refreshBtn" class="btn">Refresh</button>
+      </div>
+    </div>
+
+    <div class="filters">
+      <input type="search" id="searchInput" placeholder="Search by ID, ref or email..." />
+      <select id="statusFilter">
+        <option value="">All statuses</option>
+        <option value="paid">Paid</option>
+        <option value="pending">Pending</option>
+      </select>
+      <select id="verifiedFilter">
+        <option value="">All verifications</option>
+        <option value="true">Verified</option>
+        <option value="false">Unverified</option>
+      </select>
+      <select id="deliveryFilter">
+        <option value="">All deliveries</option>
+        <option value="standard">Standard</option>
+        <option value="express">Express</option>
+      </select>
+    </div>
+
+    <div id="ordersList" class="orders-list"></div>
+    <p id="emptyState" class="muted" style="display:none;">No orders found.</p>
+  </div>
+  <script src="orders.js"></script>
+</body>
+</html>
+
