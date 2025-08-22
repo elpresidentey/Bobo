@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Bobo & Omoge's luxury African-inspired fashion and lifestyle products. Handcrafted with premium materials and exceptional craftsmanship.">
+    <title>Bobo & Omoge - Luxury African Fashion</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://boboandomoge.com/">
+    <meta property="og:title" content="Bobo & Omoge - Luxury African Fashion">
+    <meta property="og:description" content="Discover Bobo & Omoge's luxury African-inspired fashion and lifestyle products. Handcrafted with premium materials and exceptional craftsmanship.">
+    <meta property="og:image" content="https://dummyimage.com/1200x630/2d4a3e/f7e7ce.png&amp;text=Bobo+%26+Omoge">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://boboandomoge.com/">
+    <meta name="twitter:title" content="Bobo & Omoge - Luxury African Fashion">
+    <meta name="twitter:description" content="Discover Bobo & Omoge's luxury African-inspired fashion and lifestyle products. Handcrafted with premium materials and exceptional craftsmanship.">
+    <meta name="twitter:image" content="https://dummyimage.com/1200x630/2d4a3e/f7e7ce.png&amp;text=Bobo+%26+Omoge">
+    <meta name="twitter:image:alt" content="Bobo &amp; Omoge wordmark">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="logo-mark.svg">
+    <link rel="alternate icon" type="image/x-icon" href="favicon.ico">
+    
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://images.pexels.com https://images.unsplash.com https://picsum.photos; script-src 'self' 'unsafe-inline' https://js.paystack.co; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://api.paystack.co; frame-src 'self' https://*.paystack.co https://*.paystack.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ClothingStore",
+        "name": "Bobo & Omoge",
+        "description": "Luxury African-inspired fashion and lifestyle products. Handcrafted with premium materials and exceptional craftsmanship.",
+        "url": "https://boboandomoge.com",
+        "logo": "https://boboandomoge.com/logo.png",
+        "priceRange": "$$$",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Luxury Avenue",
+            "addressLocality": "Lagos",
+            "addressRegion": "Lagos",
+            "postalCode": "101233",
+            "addressCountry": "NG"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+234-800-000-0000",
+            "contactType": "customer service",
+            "email": "info@boboandomoge.com",
+            "availableLanguage": ["English"]
+        },
+        "sameAs": [
+            "https://www.instagram.com/boboandomoge",
+            "https://www.facebook.com/boboandomoge",
+            "https://www.twitter.com/boboandomoge"
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="logo" aria-label="Bobo & Omoge">
+                <img src="logo-wordmark.svg" alt="Bobo & Omoge logo">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#vip">VIP</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button class="icon-btn" data-action="open-search" aria-label="Search" aria-expanded="false">
+                    <span aria-hidden="true">🔍</span>
+                </button>
+                <button class="icon-btn" data-action="open-wishlist" aria-label="Wishlist" aria-expanded="false">
+                    <span aria-hidden="true">❤️</span>
+                </button>
+                <button class="icon-btn" data-action="open-cart" aria-label="Shopping Cart" aria-expanded="false">
+                    <span aria-hidden="true">🛒</span>
+                    <span class="cart-count" id="cartCount" aria-live="polite">0</span>
+                </button>
+                <button class="icon-btn" data-action="open-account" aria-label="Account" aria-expanded="false">
+                    <span aria-hidden="true">👤</span>
+                </button>
+            </div>
+            <button class="mobile-menu" data-action="toggle-mobile-menu" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="serif">Luxury Redefined</h1>
+            <p>Discover the finest African-inspired luxury fashion and lifestyle products, curated for the discerning connoisseur.</p>
+            <a href="#products" class="cta-btn">Explore Collection</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="section-header">
+            <h2 class="serif">Curated Collections</h2>
+            <p>Each piece tells a story of heritage, craftsmanship, and modern luxury</p>
+        </div>
+
+        <div class="product-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="clothing">Clothing</button>
+            <button class="filter-btn" data-filter="accessories">Accessories</button>
+            <button class="filter-btn" data-filter="limited">Limited Edition</button>
+        </div>
+
+        <div class="product-grid" id="productGrid">
+            <!-- Products will be dynamically loaded here -->
+        </div>
+
+        <div style="text-align: center;" id="loadMoreSection">
+            <button class="cta-btn" data-action="load-more">
+                <span id="loadMoreText">Load More</span>
+                <span class="loading" id="loadMoreSpinner" style="display: none;"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- VIP Section -->
+    <section class="vip-section" id="vip">
+        <div class="vip-content">
+            <h2 class="serif">Join the VIP Experience</h2>
+            <p>Unlock exclusive access to limited collections, personal styling, and luxury packaging</p>
+            
+            <div class="vip-features">
+                <div class="vip-feature">
+                    <h3>Personal Stylist</h3>
+                    <p>One-on-one styling sessions with our luxury fashion experts</p>
+                </div>
+                <div class="vip-feature">
+                    <h3>Early Access</h3>
+                    <p>Be the first to shop our limited edition drops and exclusive collections</p>
+                </div>
+                <div class="vip-feature">
+                    <h3>Luxury Packaging</h3>
+                    <p>Premium packaging and personalized touches with every order</p>
+                </div>
+            </div>
+            
+            <button class="cta-btn" data-action="open-vip">Become a VIP Member</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2 class="serif">Our Heritage</h2>
+                <p>Bobo & Omoge represents the pinnacle of African-inspired luxury fashion. Founded on the principles of exceptional craftsmanship, cultural authenticity, and modern elegance, we curate pieces that celebrate the rich heritage of African artistry while meeting the sophisticated tastes of today's global luxury market.</p>
+                <p>Each item in our collection is carefully selected for its quality, uniqueness, and the story it tells. We work directly with master artisans and luxury designers to ensure that every piece meets our exacting standards of excellence.</p>
+            </div>
+            <div class="about-stats">
+                <div class="stat">
+                    <h3 class="serif">500+</h3>
+                    <p>Curated Pieces</p>
+                </div>
+                <div class="stat">
+                    <h3 class="serif">50+</h3>
+                    <p>Master Artisans</p>
+                </div>
+                <div class="stat">
+                    <h3 class="serif">25+</h3>
+                    <p>Countries Served</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="newsletter-content">
+            <h2 class="serif">Stay in Touch</h2>
+            <p>Be the first to know about new collections, exclusive offers, and luxury lifestyle insights</p>
+            <form id="newsletterForm" class="newsletter-form" novalidate>
+                <div class="form-group">
+                    <input 
+                        type="email" 
+                        id="emailInput" 
+                        name="email" 
+                        placeholder="Enter your email address" 
+                        required
+                        aria-required="true"
+                        aria-label="Email address"
+                        title="Please enter a valid email address">
+                    <div class="error-message" id="emailError" role="alert" aria-live="polite"></div>
+                </div>
+                <button type="submit" class="cta-btn">
+                    <span class="button-text">Subscribe</span>
+                    <span class="button-spinner" aria-hidden="true"></span>
+                </button>
+            </form>
+            <div id="newsletterSuccess" class="success-message" role="alert" aria-live="polite"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Bobo & Omoge</h3>
+                <p>Redefining luxury through African-inspired fashion and lifestyle products.</p>
+                <div class="social-links">
+                    <a href="#" data-social="instagram">📱</a>
+                    <a href="#" data-social="facebook">📘</a>
+                    <a href="#" data-social="twitter">🐦</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Care</h3>
+                <ul>
+                    <li><a href="#" data-modal="contact">Contact Us</a></li>
+                    <li><a href="#" data-modal="shipping">Shipping Info</a></li>
+                    <li><a href="#" data-modal="returns">Returns</a></li>
+                    <li><a href="#" data-modal="sizing">Size Guide</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#" data-action="open-vip">VIP Membership</a></li>
+                    <li><a href="#" data-modal="styling">Personal Styling</a></li>
+                    <li><a href="#" data-modal="authenticity">Authenticity</a></li>
+                    <li><a href="#" data-modal="gift">Gift Cards</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#" data-modal="careers">Careers</a></li>
+                    <li><a href="#" data-modal="sustainability">Sustainability</a></li>
+                    <li><a href="#" data-modal="press">Press</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> Bobo & Omoge. All rights reserved. | <a href="#" data-modal="privacy">Privacy Policy</a> | <a href="#" data-modal="terms">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="genericModal" class="modal" role="dialog" aria-modal="true" aria-label="Information">
+        <div class="modal-content">
+            <span class="close" data-close="genericModal">&times;</span>
+            <div id="modalBody">
+                <!-- Modal content will be dynamically loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <div id="vipModal" class="modal" role="dialog" aria-modal="true" aria-label="VIP Membership">
+        <div class="modal-content">
+            <span class="close" data-close="vipModal">&times;</span>
+            <h2 class="serif">Become a VIP Member</h2>
+            <p>Join our exclusive VIP program and enjoy premium benefits including:</p>
+            <ul class="vip-benefits">
+                <li>✨ Early access to limited collections</li>
+                <li>👗 Personal styling consultations</li>
+                <li>📦 Luxury packaging and gift wrapping</li>
+                <li>🚚 Priority shipping and handling</li>
+                <li>💎 Exclusive member-only events</li>
+                <li>🎁 Birthday and anniversary surprises</li>
+            </ul>
+            <div class="vip-pricing">
+                <div class="vip-plan">
+                    <h3>VIP Gold</h3>
+                    <p class="price">₦50,000/year</p>
+                    <button class="btn-primary" data-vip-plan="gold">Choose Gold</button>
+                </div>
+                <div class="vip-plan featured">
+                    <h3>VIP Platinum</h3>
+                    <p class="price">₦100,000/year</p>
+                    <p class="savings">Most Popular</p>
+                    <button class="btn-primary" data-vip-plan="platinum">Choose Platinum</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cartModal" class="modal" role="dialog" aria-modal="true" aria-label="Shopping Cart">
+        <div class="modal-content">
+            <span class="close" data-close="cartModal">&times;</span>
+            <h2 class="serif">Shopping Cart</h2>
+            <div id="cartItems">
+                <!-- Cart items will be dynamically loaded here -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <h3>Total: <span id="cartTotal">₦0</span></h3>
+                </div>
+                <button class="btn-primary cart-checkout" data-action="checkout">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="wishlistModal" class="modal" role="dialog" aria-modal="true" aria-label="Wishlist">
+        <div class="modal-content">
+            <span class="close" data-close="wishlistModal">&times;</span>
+            <h2 class="serif">My Wishlist</h2>
+            <div id="wishlistItems">
+                <!-- Wishlist items will be dynamically loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <div id="checkoutModal" class="modal" role="dialog" aria-modal="true" aria-label="Checkout">
+        <div class="modal-content">
+            <span class="close" data-close="checkoutModal">&times;</span>
+            <h2 class="serif">Checkout</h2>
+            <div class="checkout-grid">
+                <form id="checkoutForm" class="contact-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="coName">Full name</label>
+                            <input id="coName" name="name" type="text" placeholder="Jane Doe" required aria-required="true" />
+                        </div>
+                        <div class="form-group">
+                            <label for="coEmail">Email</label>
+                            <input id="coEmail" name="email" type="email" placeholder="jane@example.com" required aria-required="true" />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="coPhone">Phone</label>
+                            <input id="coPhone" name="phone" type="tel" placeholder="0801 234 5678" required aria-required="true" />
+                        </div>
+                        <div class="form-group">
+                            <label for="coCity">City</label>
+                            <input id="coCity" name="city" type="text" placeholder="Lagos" required aria-required="true" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="coAddress">Address</label>
+                        <input id="coAddress" name="address" type="text" placeholder="123 Luxury Avenue" required aria-required="true" />
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="coDelivery">Delivery method</label>
+                            <select id="coDelivery" name="delivery" aria-label="Delivery method">
+                                <option value="standard">Standard (2–5 days) — ₦2,500</option>
+                                <option value="express">Express (1–2 days) — ₦6,000</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="coPromo">Promo code</label>
+                            <div style="display:flex; gap:0.5rem;">
+                                <input id="coPromo" name="promo" type="text" placeholder="e.g. VIP10" aria-label="Promo code" />
+                                <button type="button" id="applyPromoBtn" class="btn-primary" style="flex:0 0 auto;">Apply</button>
+                            </div>
+                            <small style="color:var(--light-text)">Available: VIP10 (10%), BOBO20 (20%)</small>
+                            <div id="promoMessage" class="success-message" role="status" aria-live="polite"></div>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary"><span class="button-text">Pay Now</span><span class="button-spinner" aria-hidden="true"></span></button>
+                    </div>
+                    <div id="checkoutSuccess" class="success-message" role="alert" aria-live="polite"></div>
+                </form>
+                <aside class="summary-card">
+                    <h3 class="serif" style="margin-bottom: 0.5rem;">Order Summary</h3>
+                    <div id="checkoutSummaryList" class="summary-list"></div>
+                    <div class="summary-totals">
+                        <div class="summary-row"><span>Subtotal</span><span id="summarySubtotal">₦0</span></div>
+                        <div class="summary-row"><span>Shipping</span><span id="summaryShipping">₦0</span></div>
+                        <div class="summary-row"><span>Discount</span><span id="summaryDiscount">₦0</span></div>
+                        <hr class="divider" />
+                        <div class="summary-row"><strong>Total</strong><strong id="checkoutSummaryTotal">₦0</strong></div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+    <div id="searchModal" class="modal" role="dialog" aria-modal="true" aria-label="Search">
+        <div class="modal-content">
+            <span class="close" data-close="searchModal">&times;</span>
+            <h2 id="searchTitle" class="serif" style="margin-bottom: 1rem;">Search</h2>
+            <form id="searchForm" class="search-form" novalidate>
+                <input type="search" id="searchQuery" name="q" placeholder="Search products..." aria-label="Search products" autocomplete="off">
+                <button type="submit" class="btn-primary"><span class="button-text">Search</span><span class="button-spinner" aria-hidden="true"></span></button>
+            </form>
+            <div id="searchResultCount" class="success-message" role="status" aria-live="polite"></div>
+        </div>
+    </div>
+
+    <script src="https://js.paystack.co/v1/inline.js" defer></script>
+    <script src="script.js"></script>
+</body>
+</html>
