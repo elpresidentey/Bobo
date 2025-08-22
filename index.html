@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Discover Bobo & Omoge's luxury African-inspired fashion and lifestyle products. Handcrafted with premium materials and exceptional craftsmanship.">
     <title>Bobo & Omoge - Luxury African Fashion</title>
+    <base id="base-href" href="/" />
+    <script>
+        (function () {
+            try {
+                var isGH = /\.github\.io$/.test(location.hostname);
+                if (isGH) {
+                    var segs = location.pathname.split('/').filter(Boolean);
+                    var repo = segs.length ? '/' + segs[0] + '/' : '/';
+                    var baseEl = document.getElementById('base-href');
+                    if (baseEl) baseEl.setAttribute('href', repo);
+                }
+            } catch (e) {}
+        })();
+    </script>
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
