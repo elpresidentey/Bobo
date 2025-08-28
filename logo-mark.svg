@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Bobo &amp; Omoge — Monogram Mark</title>
+  <desc>Elegant monogram emblem in deep green, gold, and champagne</desc>
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#2d4a3e" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#2d4a3e" stop-opacity="1"/>
+    </radialGradient>
+    <mask id="circleMask">
+      <rect x="0" y="0" width="512" height="512" fill="white"/>
+      <!-- keep full circle visible by masking nothing else -->
+    </mask>
+  </defs>
+
+  <!-- Background medallion -->
+  <circle cx="256" cy="256" r="240" fill="url(#bgGrad)"/>
+  <!-- Outer ring -->
+  <circle cx="256" cy="256" r="232" fill="none" stroke="#d4af37" stroke-width="12"/>
+
+  <!-- Subtle starburst ornament -->
+  <g stroke="#d4af37" stroke-opacity="0.25" stroke-width="6" stroke-linecap="round">
+    <line x1="256" y1="36"  x2="256" y2="92" />
+    <line x1="256" y1="420" x2="256" y2="476" />
+    <line x1="36"  y1="256" x2="92"  y2="256" />
+    <line x1="420" y1="256" x2="476" y2="256" />
+    <line x1="110" y1="110" x2="150" y2="150" />
+    <line x1="362" y1="362" x2="402" y2="402" />
+    <line x1="110" y1="402" x2="150" y2="362" />
+    <line x1="362" y1="150" x2="402" y2="110" />
+  </g>
+
+  <!-- Monogram: B & O -->
+  <g stroke="#f7e7ce" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- B stem -->
+    <path d="M170 156 L170 356"/>
+    <!-- B bowls (circles) -->
+    <circle cx="210" cy="206" r="44"/>
+    <circle cx="210" cy="306" r="44"/>
+    <!-- O -->
+    <circle cx="330" cy="256" r="74"/>
+  </g>
+
+  <!-- Accent dot -->
+  <circle cx="330" cy="256" r="4" fill="#d4af37"/>
+</svg>
+

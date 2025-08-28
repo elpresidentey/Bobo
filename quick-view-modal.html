@@ -1,0 +1,67 @@
+<!-- Product Quick View Modal Structure -->
+<div id="quickViewModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="quickViewTitle">
+    <div class="modal-content">
+        <button type="button" class="modal-close" data-close="quickViewModal" aria-label="Close">×</button>
+        <div class="quick-view-content">
+            <h2 id="quickViewTitle" class="serif">Product Quick View</h2>
+            
+            <div class="quick-view-grid">
+                <div class="quick-view-image">
+                    <!-- Main product image will be populated here -->
+                    <img src="" alt="" id="quickViewMainImage" style="width: 100%; border-radius: 8px;">
+                    <span class="product-badge" id="quickViewBadge"></span>
+                    
+                    <!-- Thumbnail gallery for additional product images -->
+                    <div class="quick-view-thumbnails" id="quickViewThumbnails">
+                        <!-- Thumbnails will be populated here -->
+                    </div>
+                </div>
+                
+                <div class="quick-view-details">
+                    <div class="price-section">
+                        <div class="current-price" id="quickViewPrice"></div>
+                        <div class="original-price" id="quickViewOriginalPrice"></div>
+                        <div class="discount-badge" id="quickViewDiscount"></div>
+                    </div>
+                    
+                    <div class="rating-section" id="quickViewRatingSection">
+                        <div class="rating" id="quickViewRating">
+                            <!-- Star rating will be populated here -->
+                        </div>
+                    </div>
+                    
+                    <p class="description" id="quickViewDescription"></p>
+                    
+                    <div class="stock-info" id="quickViewStock"></div>
+                    
+                    <div class="variant-selectors" id="quickViewVariants">
+                        <!-- Variant selectors will be populated here -->
+                    </div>
+                    
+                    <div class="quick-view-actions">
+                        <div class="quantity-selector">
+                            <button type="button" onclick="changeQuickViewQty(-1)" aria-label="Decrease quantity">−</button>
+                            <input type="number" id="quickViewQty" value="1" min="1" max="10" aria-label="Quantity">
+                            <button type="button" onclick="changeQuickViewQty(1)" aria-label="Increase quantity">+</button>
+                        </div>
+                        
+                        <button class="btn-primary" id="quickViewAddToCart" onclick="addToCartFromQuickView()">
+                            Add to Cart
+                        </button>
+                        
+                        <button class="btn-wishlist" id="quickViewWishlistBtn" onclick="toggleWishlistItemFromQuickView()" aria-label="Add to wishlist">♡</button>
+                    </div>
+                    
+                    <div class="product-tags" id="quickViewTags">
+                        <!-- Tags will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Toast container for notifications -->
+<div id="toastContainer" class="toast-container">
+    <!-- Toast notifications will be added here dynamically -->
+</div>

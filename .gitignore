@@ -1,0 +1,13 @@
+# Ignore local artifacts and environment files
+*.log
+node_modules/
+.env
+.env.*
+# OS
+.DS_Store
+Thumbs.db
+# Archives
+*.zip
+# Netlify/Vercel local files
+.netlify/
+.vercel/

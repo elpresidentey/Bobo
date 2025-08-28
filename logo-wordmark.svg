@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="320" viewBox="0 0 1200 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Bobo &amp; Omoge — Wordmark</title>
+  <desc>Emblem with B&amp;O monogram and wordmark in Playfair Display style</desc>
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#f7e7ce"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Emblem medallion -->
+  <g transform="translate(32,32)">
+    <circle cx="128" cy="128" r="120" fill="#2d4a3e"/>
+    <circle cx="128" cy="128" r="112" fill="none" stroke="url(#goldGrad)" stroke-width="10"/>
+    <g stroke="#f7e7ce" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <path d="M80 72 L80 184"/>
+      <circle cx="110" cy="104" r="26"/>
+      <circle cx="110" cy="152" r="26"/>
+      <circle cx="168" cy="128" r="44"/>
+    </g>
+  </g>
+
+  <!-- Wordmark text -->
+  <g transform="translate(320, 55)" text-rendering="geometricPrecision">
+    <text x="0" y="90" font-family="'Playfair Display', serif" font-size="92" font-weight="700" fill="#2d4a3e" stroke="#2d4a3e" stroke-width="1.6" paint-order="stroke fill" letter-spacing="1">Bobo</text>
+    <text x="250" y="90" font-family="'Playfair Display', serif" font-size="92" font-weight="700" fill="url(#goldGrad)" stroke="#2d4a3e" stroke-width="1.2" paint-order="stroke fill">&amp;</text>
+    <text x="320" y="90" font-family="'Playfair Display', serif" font-size="92" font-weight="700" fill="#2d4a3e" stroke="#2d4a3e" stroke-width="1.6" paint-order="stroke fill" letter-spacing="1">Omoge</text>
+    <text x="2" y="150" font-family="Lato, sans-serif" font-size="24" fill="#6b6b6b" letter-spacing="3">LUXURY AFRICAN FASHION</text>
+  </g>
+</svg>
+
